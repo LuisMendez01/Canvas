@@ -10,19 +10,121 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Canvas View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Canvas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CanvasViewController" customModule="Canvas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="taQ-9J-mvu" userLabel="Tray View">
+                                <rect key="frame" x="0.0" y="567" width="414" height="295"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wink" translatesAutoresizingMaskIntoConstraints="NO" id="tr0-hn-Nuh">
+                                        <rect key="frame" x="309" y="195" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="dPV-wj-dqb"/>
+                                            <constraint firstAttribute="width" constant="80" id="tYr-cl-hQq"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sad" translatesAutoresizingMaskIntoConstraints="NO" id="qwf-zp-9bx">
+                                        <rect key="frame" x="25" y="195" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="0g3-1f-UQQ"/>
+                                            <constraint firstAttribute="width" constant="80" id="BMs-kD-1I9"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tongue" translatesAutoresizingMaskIntoConstraints="NO" id="r4C-74-ycR">
+                                        <rect key="frame" x="167" y="195" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="SBr-TO-X5W"/>
+                                            <constraint firstAttribute="height" constant="80" id="eEp-cu-6OO"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="VaO-S2-Jmm" customClass="d">
+                                        <rect key="frame" x="182" y="8" width="50" height="30"/>
+                                        <color key="backgroundColor" red="0.82745098039999998" green="0.87843137250000003" blue="0.89019607840000003" alpha="0.92000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="0QS-B0-wgp"/>
+                                            <constraint firstAttribute="width" constant="50" id="7Hj-wD-EM1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="PdZ-1g-FTO">
+                                        <rect key="frame" x="309" y="74" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="WqU-TM-80d"/>
+                                            <constraint firstAttribute="height" constant="80" id="phy-Eh-jbr"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dead" translatesAutoresizingMaskIntoConstraints="NO" id="v1F-En-Jw3">
+                                        <rect key="frame" x="25" y="74" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="NrV-l7-iw9"/>
+                                            <constraint firstAttribute="height" constant="80" id="yti-Oz-ZA8"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="excited" translatesAutoresizingMaskIntoConstraints="NO" id="q0u-n7-FYQ">
+                                        <rect key="frame" x="167" y="74" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="bMt-Ie-NL8"/>
+                                            <constraint firstAttribute="height" constant="80" id="iwp-gs-aPL"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.87843137250000003" blue="0.89019607840000003" alpha="0.92000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="tr0-hn-Nuh" secondAttribute="bottom" constant="20" id="6eI-6b-Vq0"/>
+                                    <constraint firstItem="VaO-S2-Jmm" firstAttribute="top" secondItem="taQ-9J-mvu" secondAttribute="top" constant="8" id="AMC-zI-yn9"/>
+                                    <constraint firstItem="r4C-74-ycR" firstAttribute="top" secondItem="q0u-n7-FYQ" secondAttribute="bottom" constant="41" id="BsI-wj-YkW"/>
+                                    <constraint firstAttribute="bottom" secondItem="qwf-zp-9bx" secondAttribute="bottom" constant="20" id="CZo-Oc-e68"/>
+                                    <constraint firstItem="qwf-zp-9bx" firstAttribute="leading" secondItem="taQ-9J-mvu" secondAttribute="leading" constant="25" id="EZt-td-3ct"/>
+                                    <constraint firstAttribute="height" constant="295" id="GUq-wf-saK"/>
+                                    <constraint firstItem="v1F-En-Jw3" firstAttribute="leading" secondItem="taQ-9J-mvu" secondAttribute="leading" constant="25" id="LMD-z6-dUI"/>
+                                    <constraint firstAttribute="trailing" secondItem="tr0-hn-Nuh" secondAttribute="trailing" constant="25" id="Lnc-b3-Rvz"/>
+                                    <constraint firstAttribute="bottom" secondItem="r4C-74-ycR" secondAttribute="bottom" constant="20" id="LqI-ya-b6O"/>
+                                    <constraint firstItem="r4C-74-ycR" firstAttribute="centerX" secondItem="taQ-9J-mvu" secondAttribute="centerX" id="QSa-WM-y5R"/>
+                                    <constraint firstItem="VaO-S2-Jmm" firstAttribute="centerX" secondItem="q0u-n7-FYQ" secondAttribute="centerX" id="Vvt-5M-IGh"/>
+                                    <constraint firstAttribute="trailing" secondItem="PdZ-1g-FTO" secondAttribute="trailing" constant="25" id="YEN-MQ-VMd"/>
+                                    <constraint firstItem="tr0-hn-Nuh" firstAttribute="top" secondItem="PdZ-1g-FTO" secondAttribute="bottom" constant="41" id="aYe-fH-hEf"/>
+                                    <constraint firstItem="q0u-n7-FYQ" firstAttribute="centerX" secondItem="r4C-74-ycR" secondAttribute="centerX" id="bqq-8H-qxb"/>
+                                    <constraint firstItem="qwf-zp-9bx" firstAttribute="top" secondItem="v1F-En-Jw3" secondAttribute="bottom" constant="41" id="sGf-dm-Di9"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="C5w-vB-RZN" appends="YES" id="pib-NW-E6H"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.61568627450980395" green="0.67450980392156867" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="taQ-9J-mvu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Y9-tw-Dhr"/>
+                            <constraint firstItem="taQ-9J-mvu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="V1L-co-Rak"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="taQ-9J-mvu" secondAttribute="bottom" id="ixR-uS-e5W"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="trayView" destination="taQ-9J-mvu" id="PVv-Ew-Dss"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="C5w-vB-RZN">
+                    <connections>
+                        <action selector="didPanTray:" destination="BYZ-38-t0r" id="Tfv-hn-Gxl"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dead" width="60" height="60"/>
+        <image name="down_arrow" width="20" height="14"/>
+        <image name="excited" width="60" height="60"/>
+        <image name="happy" width="60" height="60"/>
+        <image name="sad" width="60" height="60"/>
+        <image name="tongue" width="60" height="60"/>
+        <image name="wink" width="60" height="60"/>
+    </resources>
 </document>
